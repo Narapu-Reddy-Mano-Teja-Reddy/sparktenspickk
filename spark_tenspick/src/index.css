@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-foreground font-body scroll-smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #C89B3C, #E7C97F); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #E7C97F; }
+
+/* ── Global ── */
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.will-change-transform { will-change: transform; }
+img { content-visibility: auto; }
+
+/* ──────────────────────────────────────────
+   VAPOURISE PARTICLE TEXT (Footer)
+────────────────────────────────────────── */
+.vapourise-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: visible;
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+.vapourise-letter {
+  font-family: 'Michroma', sans-serif;
+  font-size: clamp(24px, 5.5vw, 80px);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(200,155,60,0.85);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  animation: vapouriseLetter 4s ease-in-out infinite alternate;
+  display: inline-block;
+  position: relative;
+  transform-origin: bottom center;
+  background: linear-gradient(180deg, rgba(200,155,60,0.95) 0%, rgba(200,155,60,0.6) 60%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@keyframes vapouriseLetter {
+  0%   { opacity: 0.35; transform: translateY(0px) scale(1); filter: blur(0px); }
+  30%  { opacity: 0.95; transform: translateY(-8px) scale(1.01); filter: blur(0.5px); }
+  60%  { opacity: 0.75; transform: translateY(-14px) scale(1.02); filter: blur(1.5px); }
+  100% { opacity: 0.45; transform: translateY(-22px) scale(1.04); filter: blur(3.5px); }
+}
+
+/* Floating vapour particles */
+.vapour-particle {
+  position: absolute;
+  bottom: 60%;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, rgba(200,155,60,0.7) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: particleRise 3s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes particleRise {
+  0%   { opacity: 0; transform: translateY(0) scale(0); }
+  20%  { opacity: 0.8; transform: translateY(-20px) scale(1); }
+  60%  { opacity: 0.4; transform: translateY(-60px) scale(1.5); }
+  100% { opacity: 0; transform: translateY(-120px) scale(0.5); }
+}
+
+/* ──────────────────────────────────────────
+   GLASSMORPHISM SOCIAL ICONS
+────────────────────────────────────────── */
+.glass-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200,155,60,0.2);
+  color: rgba(200,155,60,0.7);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.glass-social-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), transparent 60%);
+  border-radius: 50%;
+}
+.glass-social-icon:hover {
+  background: rgba(200,155,60,0.15);
+  border-color: rgba(200,155,60,0.6);
+  color: #C89B3C;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 24px rgba(200,155,60,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.glass-social-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ──────────────────────────────────────────
+   PREMIUM GLASSMORPHISM UTILITY
+────────────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* ──────────────────────────────────────────
+   PREMIUM NAV LINK UNDERLINE ANIMATION
+────────────────────────────────────────── */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, #C89B3C, #E7C97F);
+  transition: width 0.3s ease;
+}
+.nav-link-underline:hover::after { width: 100%; }
+
+/* ──────────────────────────────────────────
+   LUXURY GRADIENT GLOW PULSE
+────────────────────────────────────────── */
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(200,155,60,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(200,155,60,0.5), 0 0 80px rgba(200,155,60,0.1); }
+}
+.gold-glow-pulse { animation: goldGlow 3s ease-in-out infinite; }
+
+/* ──────────────────────────────────────────
+   SHIMMER TEXT EFFECT
+────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, #C89B3C 0%, #E7C97F 40%, #fff 50%, #E7C97F 60%, #C89B3C 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ──────────────────────────────────────────
+   FLOATING ANIMATION
+────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+.float-anim { animation: float 4s ease-in-out infinite; }
+
+/* ──────────────────────────────────────────
+   SCAN LINE AMBIENT
+────────────────────────────────────────── */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  30%  { opacity: 0.06; }
+  70%  { opacity: 0.06; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+.scanline-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(200,155,60,0.04) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ──────────────────────────────────────────
+   MOBILE PREMIUM TWEAKS
+────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .vapourise-letter {
+    font-size: clamp(18px, 5vw, 36px);
+    letter-spacing: 0.04em;
+  }
+  .vapourise-container {
+    padding: 8px 0 20px;
+  }
+}
