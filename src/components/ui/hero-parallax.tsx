@@ -48,7 +48,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[140vh] md:h-[250vh] py-20 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto bg-background"
+      className="h-[140vh] md:h-[250vh] pt-12 pb-20 md:pt-16 md:pb-40 overflow-hidden antialiased relative flex flex-col self-auto bg-background"
     >
       <div className="absolute top-0 left-0 right-0 h-[100vh] w-full pointer-events-none z-0 opacity-70">
         <Galaxy 
@@ -107,7 +107,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto pt-24 pb-10 md:pt-32 md:pb-16 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto pt-16 pb-6 md:pt-20 md:pb-8 px-4 w-full left-0 top-0">
       {/* Decorative background grid */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         {/* Radial gold glow */}
