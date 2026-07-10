@@ -165,7 +165,7 @@ export const Header = () => {
         transition={{ duration: 0.9, ease: 'easeOut' }}
         className="relative z-10"
       >
-        {/* Animated SPARK TENSPICK Title & Locations */}
+        {/* Animated SPARK TENSPICK Title */}
         <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2">
           <motion.div 
             className="flex space-x-1"
@@ -192,16 +192,6 @@ export const Header = () => {
                 {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 border border-primary-gold/20 bg-primary-gold/5 rounded-full text-[10px] sm:text-xs uppercase tracking-widest text-primary-gold font-heading"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-primary-gold animate-pulse" />
-            <span>Kuwait & India</span>
           </motion.div>
         </div>
 
