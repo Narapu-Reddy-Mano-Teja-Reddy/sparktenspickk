@@ -60,20 +60,20 @@ export default function Contact() {
                 <span className="w-10 h-px bg-primary-gold block"></span> India HQ
               </h2>
               <div className="space-y-5 text-white/70 font-body relative z-10">
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Phone</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Phone</span> 
                   <a href="tel:+917330863893" className="hover:text-primary-gold transition-colors">+91 73308 63893</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">WhatsApp</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">WhatsApp</span> 
                   <a href="https://wa.me/917330863893" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">+91 73308 63893</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Email</span> 
                   <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Address</span> 
                   <span>Bazar Street, Pullampeta, India</span>
                 </p>
               </div>
@@ -86,20 +86,20 @@ export default function Contact() {
                 <span className="w-10 h-px bg-primary-gold block"></span> Kuwait Office
               </h2>
               <div className="space-y-5 text-white/70 font-body relative z-10">
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Phone</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Phone</span> 
                   <a href="tel:+96555139630" className="hover:text-primary-gold transition-colors">+965 55139630</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">WhatsApp</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">WhatsApp</span> 
                   <a href="https://wa.me/96555139630" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">+965 55139630</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Email</span> 
                   <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
                 </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
+                <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Address</span> 
                   <span>Block 10, Salmiya, Kuwait</span>
                 </p>
               </div>
