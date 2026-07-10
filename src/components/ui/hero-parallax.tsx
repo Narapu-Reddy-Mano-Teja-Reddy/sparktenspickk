@@ -71,7 +71,7 @@ export const HeroParallax = ({
         style={{
           opacity,
         }}
-        className="mt-10 md:mt-20"
+        className="mt-4 md:mt-8"
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 md:space-x-20 mb-8 md:mb-20">
           {firstRow.map((product) => (
@@ -107,7 +107,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto pt-24 pb-10 md:pt-32 md:pb-16 px-4 w-full left-0 top-0">
       {/* Decorative background grid */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         {/* Radial gold glow */}
