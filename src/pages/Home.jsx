@@ -122,7 +122,7 @@ export default function Home() {
               >
                 <span className="w-8 h-px bg-primary-gold" /> Who We Are
               </motion.span>
-              <h2 className="font-heading text-4xl md:text-5xl text-foreground mb-6 leading-tight">
+              <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl text-foreground mb-6 leading-tight">
                 PIONEERING THE <span className="text-primary-gold block mt-2">FUTURE OF TECH</span>
               </h2>
               <p className="text-muted text-lg font-body leading-relaxed mb-6">
@@ -216,7 +216,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-2 text-primary-gold text-xs uppercase tracking-[0.3em] font-heading mb-4">
               <span className="w-8 h-px bg-primary-gold" /> What We Build <span className="w-8 h-px bg-primary-gold" />
             </span>
-            <h2 className="font-heading text-4xl md:text-6xl text-foreground uppercase tracking-wider mb-4">Our Services</h2>
+            <h2 className="font-heading text-2xl sm:text-4xl md:text-6xl text-foreground uppercase tracking-wider mb-4">Our Services</h2>
             <p className="text-muted text-lg font-body max-w-2xl mx-auto">
               From concept to deployment, we deliver end-to-end technology solutions that drive measurable business outcomes.
             </p>
@@ -265,7 +265,7 @@ export default function Home() {
                 className="text-center group"
               >
                 <motion.p
-                  className="font-heading text-5xl md:text-6xl text-primary-gold mb-2"
+                  className="font-heading text-3xl sm:text-5xl md:text-6xl text-primary-gold mb-2"
                   whileInView={{ scale: [0.8, 1.05, 1] }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 + 0.2 }}
@@ -344,7 +344,7 @@ export default function Home() {
             <span className="inline-flex items-center gap-2 text-primary-gold text-xs uppercase tracking-[0.3em] font-heading mb-6">
               <span className="w-8 h-px bg-primary-gold" /> Ready to Transform? <span className="w-8 h-px bg-primary-gold" />
             </span>
-            <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl text-white uppercase tracking-tight mb-8 leading-tight">
+            <h2 className="font-heading text-2xl sm:text-4xl md:text-6xl lg:text-7xl text-white uppercase tracking-tight mb-8 leading-tight">
               Let's Build Something <span className="text-primary-gold">Extraordinary</span>
             </h2>
             <p className="text-muted text-lg font-body mb-10 max-w-2xl mx-auto">

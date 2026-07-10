@@ -36,7 +36,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
             Let's <span className="text-primary-gold">Collaborate</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-4xl mx-auto leading-relaxed">
@@ -54,19 +54,19 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* India Card */}
-            <div className="bg-card p-6 sm:p-10 border border-border group hover:border-primary-gold transition-colors duration-500 relative overflow-hidden">
+            <div className="bg-card p-5 sm:p-10 border border-border group hover:border-primary-gold transition-colors duration-500 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-primary-gold/5 rounded-bl-full group-hover:scale-150 transition-transform duration-500"></div>
-              <h2 className="text-3xl text-white font-heading uppercase mb-8 flex items-center gap-4 relative z-10">
+              <h2 className="text-2xl sm:text-3xl text-white font-heading uppercase mb-8 flex items-center gap-4 relative z-10">
                 <span className="w-10 h-px bg-primary-gold block"></span> India HQ
               </h2>
               <div className="space-y-5 text-white/70 font-body relative z-10">
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Phone</span> 
-                  <span>+91 98765 43210</span>
+                  <a href="tel:+917330863893" className="hover:text-primary-gold transition-colors">+91 73308 63893</a>
                 </p>
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">WhatsApp</span> 
-                  <span>+91 98765 43210</span>
+                  <a href="https://wa.me/917330863893" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">+91 73308 63893</a>
                 </p>
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
@@ -74,7 +74,33 @@ export default function Contact() {
                 </p>
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
-                  <span>Tech Park, Cyber City, Pullameta, India</span>
+                  <span>Bazar Street, Pullampeta, India</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Kuwait Card */}
+            <div className="bg-card p-5 sm:p-10 border border-border group hover:border-primary-gold transition-colors duration-500 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary-gold/5 rounded-bl-full group-hover:scale-150 transition-transform duration-500"></div>
+              <h2 className="text-2xl sm:text-3xl text-white font-heading uppercase mb-8 flex items-center gap-4 relative z-10">
+                <span className="w-10 h-px bg-primary-gold block"></span> Kuwait Office
+              </h2>
+              <div className="space-y-5 text-white/70 font-body relative z-10">
+                <p className="flex items-start gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Phone</span> 
+                  <a href="tel:+96555139630" className="hover:text-primary-gold transition-colors">+965 55139630</a>
+                </p>
+                <p className="flex items-start gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">WhatsApp</span> 
+                  <a href="https://wa.me/96555139630" target="_blank" rel="noopener noreferrer" className="hover:text-primary-gold transition-colors">+965 55139630</a>
+                </p>
+                <p className="flex items-start gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
+                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
+                </p>
+                <p className="flex items-start gap-4">
+                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
+                  <span>Block 10, Salmiya, Kuwait</span>
                 </p>
               </div>
             </div>
@@ -107,7 +133,7 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="bg-card p-6 sm:p-10 border border-border space-y-6">
+            <form onSubmit={handleSubmit} className="bg-card p-5 sm:p-10 border border-border space-y-6">
               <h3 className="font-heading text-2xl text-white uppercase tracking-widest mb-4">Send Us a Message</h3>
               <p className="text-white/60 font-body text-sm mb-6 border-b border-border pb-6">Fill out the form below and our team will get back to you within 4 business hours.</p>
               

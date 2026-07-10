@@ -67,7 +67,7 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="font-heading text-5xl md:text-7xl text-foreground mb-6 uppercase">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-7xl text-foreground mb-6 uppercase">
             Our <span className="text-primary-gold">Portfolio</span>
           </h1>
           <p className="text-muted text-lg md:text-xl font-body max-w-3xl mx-auto leading-relaxed">

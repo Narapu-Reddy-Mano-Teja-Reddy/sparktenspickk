@@ -54,7 +54,7 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
             Our <span className="text-primary-gold">Services</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-4xl mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-4xl md:text-5xl text-white uppercase tracking-wider mb-6">Full Service <span className="text-primary-gold">Breakdown</span></h2>
+            <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-wider mb-6">Full Service <span className="text-primary-gold">Breakdown</span></h2>
             <p className="text-white/60 font-body text-lg max-w-3xl mx-auto">A deeper look at what we deliver for each core discipline.</p>
           </motion.div>
 
@@ -115,7 +115,7 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="mt-32 text-center border border-primary-gold/30 bg-secondary p-8 sm:p-12 md:p-20"
         >
-          <h2 className="font-heading text-4xl md:text-5xl text-white uppercase mb-6">Need a Custom Service?</h2>
+          <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl text-white uppercase mb-6">Need a Custom Service?</h2>
           <p className="text-white/70 font-body text-xl max-w-3xl mx-auto leading-relaxed mb-10">
             Our services are flexible and modular. If you have a challenge that doesn't fit neatly into a category, our engineering consultants will craft a bespoke solution tailored exclusively to your needs.
           </p>

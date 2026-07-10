@@ -120,17 +120,17 @@ export default function MainLayout() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+          <Link to="/" className="flex items-center gap-3 sm:gap-4 flex-nowrap group">
             <motion.img
               src="/logo.png"
               alt="SPARK TENSPICK Logo"
-              className="h-11 sm:h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(200,155,60,0.5)]"
+              className="h-14 sm:h-18 md:h-22 w-auto flex-shrink-0 object-contain drop-shadow-[0_0_12px_rgba(200,155,60,0.5)]"
               whileHover={{ scale: 1.05, filter: 'drop-shadow(0 0 20px rgba(200,155,60,0.8))' }}
               transition={{ duration: 0.3 }}
             />
-            <div className="flex flex-col leading-none">
-              <span className="font-heading text-white text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase">Spark</span>
-              <span className="font-heading text-primary-gold text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase">Tenspick</span>
+            <div className="flex flex-col leading-none flex-shrink-0">
+              <span className="font-heading text-white text-xs sm:text-sm md:text-base tracking-[0.25em] sm:tracking-[0.3em] uppercase">Spark</span>
+              <span className="font-heading text-primary-gold text-xs sm:text-sm md:text-base tracking-[0.25em] sm:tracking-[0.3em] uppercase">Tenspick</span>
             </div>
           </Link>
 
@@ -273,14 +273,14 @@ export default function MainLayout() {
 
             {/* Brand */}
             <div>
-              <Link to="/" className="mb-6 flex items-center gap-2 sm:gap-3">
+              <Link to="/" className="mb-6 flex items-center gap-3 sm:gap-4 flex-nowrap">
                 <img
                   src="/logo.png"
                   alt="SPARK TENSPICK Logo"
-                  className="h-11 sm:h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(200,155,60,0.4)]"
+                  className="h-14 sm:h-16 md:h-18 w-auto flex-shrink-0 object-contain drop-shadow-[0_0_10px_rgba(200,155,60,0.4)]"
                 />
                 {/* Always show brand text inline, single line on mobile */}
-                <span className="font-heading text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase whitespace-nowrap">
+                <span className="font-heading text-white text-sm sm:text-base md:text-lg tracking-[0.2em] sm:tracking-[0.25em] uppercase whitespace-nowrap">
                   Spark <span className="text-primary-gold">Tenspick</span>
                 </span>
               </Link>
@@ -358,17 +358,31 @@ export default function MainLayout() {
               <h3 className="font-heading text-white tracking-widest uppercase text-sm mb-6 flex items-center gap-2">
                 <span className="w-6 h-px bg-primary-gold" />Contact
               </h3>
-              <ul className="space-y-3 text-muted font-body text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary-gold text-xs uppercase tracking-widest font-heading mt-0.5 w-8 flex-shrink-0">IN</span>
-                  <span>Pullameta, India</span>
-                </li>
-                <li>
+              <div className="space-y-5 text-muted font-body text-sm">
+                <div>
+                  <h4 className="text-primary-gold text-xs uppercase tracking-widest font-heading mb-1.5 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-gold" /> India HQ
+                  </h4>
+                  <p className="text-xs mb-1">Bazar Street, Pullampeta, India</p>
+                  <p className="text-xs">
+                    <a href="tel:+917330863893" className="hover:text-primary-gold transition-colors">+91 73308 63893</a>
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-primary-gold text-xs uppercase tracking-widest font-heading mb-1.5 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-gold" /> Kuwait Office
+                  </h4>
+                  <p className="text-xs mb-1">Block 10, Salmiya, Kuwait</p>
+                  <p className="text-xs">
+                    <a href="tel:+96555139630" className="hover:text-primary-gold transition-colors">+965 55139630</a>
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-white/5">
                   <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors text-xs break-all">
                     sparktenspick@gmail.com
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
 

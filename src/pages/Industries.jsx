@@ -81,7 +81,7 @@ export default function Industries() {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl text-white mb-6 uppercase tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-6 uppercase tracking-tight leading-tight">
             Industries We <span className="text-primary-gold">Empower</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-5xl mx-auto leading-relaxed">

@@ -49,7 +49,7 @@ export default function About() {
           >
             <span className="w-8 h-px bg-primary-gold" /> Our Story <span className="w-8 h-px bg-primary-gold" />
           </motion.span>
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white mb-8 uppercase tracking-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-8 uppercase tracking-tight">
             About <span className="text-shimmer">Us</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-5xl mx-auto leading-relaxed">
@@ -73,13 +73,13 @@ export default function About() {
             { num: '100', suffix: '+', label: 'Global Experts' },
             { num: '99.9', suffix: '%', label: 'Uptime SLA' },
           ].map(({ num, suffix, label }, i) => (
-            <div key={label} className="bg-secondary p-6 sm:p-10 text-center group hover:bg-card transition-colors duration-300">
+            <div key={label} className="bg-secondary p-4 sm:p-10 text-center group hover:bg-card transition-colors duration-300">
               <motion.p
                 initial={{ scale: 0.5, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="font-heading text-4xl md:text-5xl text-primary-gold mb-2"
+                className="font-heading text-3xl md:text-5xl text-primary-gold mb-2"
               >
                 <AnimatedCounter value={num} suffix={suffix} />
               </motion.p>
@@ -171,7 +171,7 @@ export default function About() {
             <span className="inline-flex items-center gap-2 text-primary-gold text-xs uppercase tracking-[0.3em] font-heading mb-4">
               <span className="w-8 h-px bg-primary-gold" /> Foundation <span className="w-8 h-px bg-primary-gold" />
             </span>
-            <h2 className="font-heading text-4xl md:text-6xl text-white uppercase tracking-wider mb-6">Core Values</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-6xl text-white uppercase tracking-wider mb-6">Core Values</h2>
             <p className="text-white/60 font-body max-w-2xl mx-auto text-lg">The foundational principles that govern every line of code we write and every partnership we forge.</p>
           </div>
 

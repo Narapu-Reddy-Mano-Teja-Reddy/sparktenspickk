@@ -154,6 +154,46 @@ export const Header = () => {
         transition={{ duration: 0.9, ease: 'easeOut' }}
         className="relative z-10"
       >
+        {/* Animated SPARK TENSPICK Title & Locations */}
+        <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <motion.div 
+            className="flex space-x-1"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              visible: { transition: { staggerChildren: 0.05 } }
+            }}
+          >
+            {"SPARK TENSPICK".split("").map((char, index) => (
+              <motion.span
+                key={index}
+                className="font-heading text-lg sm:text-2xl md:text-3xl font-extrabold uppercase tracking-wider text-shimmer"
+                variants={{
+                  hidden: { opacity: 0, y: 15, scale: 0.9 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0, 
+                    scale: 1,
+                    transition: { type: "spring", stiffness: 120 }
+                  }
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3 py-1 border border-primary-gold/20 bg-primary-gold/5 rounded-full text-[10px] sm:text-xs uppercase tracking-widest text-primary-gold font-heading"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-gold animate-pulse" />
+            <span>Kuwait & India</span>
+          </motion.div>
+        </div>
+
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}

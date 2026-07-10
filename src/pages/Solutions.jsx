@@ -58,7 +58,7 @@ export default function Solutions() {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
             Smart Digital <br className="hidden md:block" /> <span className="text-primary-gold">Solutions</span> For Every Business
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-4xl mx-auto leading-relaxed">
@@ -98,7 +98,7 @@ export default function Solutions() {
           className="bg-secondary border border-primary-gold/30 p-8 sm:p-12 md:p-20 text-center relative overflow-hidden"
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl opacity-10 blur-3xl rounded-full bg-primary-gold pointer-events-none"></div>
-          <h2 className="font-heading text-4xl md:text-5xl text-white uppercase tracking-widest mb-6 relative z-10">Ready to Transform Your Enterprise?</h2>
+          <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl text-white uppercase tracking-widest mb-6 relative z-10">Ready to Transform Your Enterprise?</h2>
           <p className="text-white/80 font-body text-xl max-w-3xl mx-auto leading-relaxed mb-10 relative z-10">
             Stop losing ground to technological inefficiencies. Partner with SPARK TENSPICK to architect the exact digital solution your business needs to dominate the market.
           </p>

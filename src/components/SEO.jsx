@@ -24,7 +24,7 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
     setMetaTag('description', finalDesc);
     
     const generateDynamicKeywords = () => {
-      const locations = ['india'];
+      const locations = ['india', 'kuwait'];
       const prefixes = [
         'best', 'top', 'affordable', 'professional', 'enterprise', 
         'custom', 'near me', 'for startups', 'for business', 
@@ -80,8 +80,8 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
           });
         });
 
-        // Special IT Company case for India
-        if (loc === 'india') {
+        // Special IT Company case for India/Kuwait
+        if (loc === 'india' || loc === 'kuwait') {
           const itPrefixes = ['best', 'top', 'affordable', 'professional', 'enterprise'];
           itPrefixes.forEach(pref => {
             generated.push(`${pref} it company ${loc}`);
@@ -95,7 +95,7 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
     const defaultKeywords = [
       "Spark Tenspick", "Tenspick", "enterprise software", 
       "AI automation", "cloud architecture", "UI/UX design", "custom development", 
-      "software development India", "tech firm Pullameta"
+      "software development India", "tech firm Pullampeta", "software company Kuwait", "IT services Kuwait"
     ];
     
     const combinedKeywords = Array.from(new Set([
@@ -153,10 +153,17 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+91-98765-43210",
+          "telephone": "+91-7330863893",
           "contactType": "sales",
           "areaServed": ["IN"],
           "availableLanguage": ["en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+965-55139630",
+          "contactType": "sales",
+          "areaServed": ["KW"],
+          "availableLanguage": ["en", "ar"]
         }
       ]
     };

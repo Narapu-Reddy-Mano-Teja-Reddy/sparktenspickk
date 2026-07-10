@@ -57,7 +57,7 @@ export default function Process() {
           transition={{ duration: 0.8 }}
           className="text-center mb-32"
         >
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-white mb-8 uppercase tracking-tight leading-tight">
             Our Development <br className="hidden md:block" /><span className="text-primary-gold">Process</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-3xl mx-auto leading-relaxed">
