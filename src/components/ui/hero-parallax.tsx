@@ -27,17 +27,28 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   });
 
-  const translateX = useTransform(scrollYProgress, [0, 1], [0, 1000]);
-  const translateXReverse = useTransform(scrollYProgress, [0, 1], [0, -1000]);
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const translateRange = isMobile ? 120 : 1000;
+  const translateX = useTransform(scrollYProgress, [0, 1], [0, translateRange]);
+  const translateXReverse = useTransform(scrollYProgress, [0, 1], [0, -translateRange]);
   const rotateX = useTransform(scrollYProgress, [0, 0.2], [15, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [isMobile ? 0.75 : 0.2, 1]);
   const rotateZ = useTransform(scrollYProgress, [0, 0.2], [20, 0]);
   const translateY = useTransform(scrollYProgress, [0, 0.2], [-700, 500]);
   
   return (
     <div
       ref={ref}
-      className="h-[250vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto bg-background"
+      className="h-[140vh] md:h-[250vh] py-20 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto bg-background"
     >
       <div className="absolute top-0 left-0 right-0 h-[100vh] w-full pointer-events-none z-0 opacity-70">
         <Galaxy 
@@ -60,9 +71,9 @@ export const HeroParallax = ({
         style={{
           opacity,
         }}
-        className="mt-20"
+        className="mt-10 md:mt-20"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 md:space-x-20 mb-8 md:mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -71,7 +82,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-20 ">
+        <motion.div className="flex flex-row space-x-6 md:space-x-20 mb-8 md:mb-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -80,7 +91,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 md:space-x-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
