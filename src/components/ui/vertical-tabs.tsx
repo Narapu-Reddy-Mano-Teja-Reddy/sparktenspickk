@@ -112,13 +112,13 @@ export function VerticalTabs() {
                     key={service.id}
                     onClick={() => handleTabClick(index)}
                     className={cn(
-                      "group relative flex items-start gap-4 py-6 md:py-8 text-left transition-all duration-500 border-t border-border/50 first:border-0",
+                      "group relative flex items-start gap-4 py-6 md:py-8 pl-3 md:pl-0 text-left transition-all duration-500 border-t border-border/50 first:border-0",
                       isActive
                         ? "text-foreground"
                         : "text-muted hover:text-foreground"
                     )}
                   >
-                    <div className="absolute left-[-16px] md:left-[-24px] top-0 bottom-0 w-[2px] bg-secondary">
+                    <div className="absolute left-0 md:left-[-24px] top-0 bottom-0 w-[2px] bg-secondary">
                       {isActive && (
                         <motion.div
                           key={`progress-${index}-${isPaused}`}

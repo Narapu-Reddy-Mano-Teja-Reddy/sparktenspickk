@@ -22,8 +22,8 @@ export default function About() {
     <div className="w-full relative bg-background pt-32 pb-24 min-h-screen">
       <SEO 
         title="About Us" 
-        description="Learn more about SPARK TENSPICK, a premier global technology firm formed through a strategic collaboration between TENSPICK and Spark Groups Kuwait." 
-        keywords="About Spark Tenspick, Tenspick Kuwait, Spark Groups, tech legacy, software engineering leaders"
+        description="Learn more about SPARK TENSPICK, a premier global technology firm delivering premium enterprise software, AI automation, and high-end digital experiences." 
+        keywords="About Spark Tenspick, tech legacy, software engineering leaders, software development India"
       />
 
       {/* ── Ambient background ── */}
@@ -50,11 +50,11 @@ export default function About() {
             <span className="w-8 h-px bg-primary-gold" /> Our Story <span className="w-8 h-px bg-primary-gold" />
           </motion.span>
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-white mb-8 uppercase tracking-tight">
-            About <span className="text-primary-gold">Us</span>
+            About <span className="text-shimmer">Us</span>
           </h1>
           <p className="text-white/80 text-lg md:text-2xl font-body max-w-5xl mx-auto leading-relaxed">
             <span className="text-primary-gold font-bold">SPARK TENSPICK</span> is a global technology powerhouse delivering innovative digital solutions.
-            Born from the visionary collaboration of TENSPICK and Spark Groups Kuwait, we engineer tomorrow's digital world today, bridging the gap between raw ambition and technological execution.
+            We engineer tomorrow's digital world today, bridging the gap between raw ambition and technological execution.
             Our focus is singular: engineering premium, scalable, and secure technology that propels global enterprises to market dominance.
           </p>
         </motion.div>
@@ -100,10 +100,10 @@ export default function About() {
             <span className="inline-flex items-center gap-2 text-primary-gold text-xs uppercase tracking-[0.3em] font-heading mb-4">
               <span className="w-8 h-px bg-primary-gold" /> Our Heritage
             </span>
-            <h2 className="font-heading text-4xl text-primary-gold mb-6 uppercase tracking-widest border-b border-primary-gold/30 pb-4 inline-block">The Legacy</h2>
+            <h2 className="font-heading text-4xl mb-6 uppercase tracking-widest border-b border-primary-gold/30 pb-4 inline-block text-shimmer">The Legacy</h2>
             <p className="text-white/70 font-body leading-relaxed text-lg mb-6">
-              When two industry giants collide, innovation is inevitable. SPARK TENSPICK represents the ultimate synergy of deep-rooted enterprise experience and relentless technological agility.
-              Spark Groups Kuwait brings decades of vast corporate infrastructure, regional dominance, and uncompromising quality standards. TENSPICK injects aggressive innovation, elite software engineering, and bleeding-edge digital strategy.
+              When deep experience and modern agility align, innovation is inevitable. SPARK TENSPICK represents the ultimate synergy of robust enterprise infrastructure and relentless software engineering talent.
+              We inject aggressive innovation, elite engineering, and bleeding-edge digital strategy to solve high-stakes challenges.
             </p>
             <p className="text-white/70 font-body leading-relaxed text-lg">
               Together, we don't just participate in the digital economy; we define it. We build systems that process millions of transactions, interfaces that captivate millions of users, and architectures that stand resilient against any threat.
@@ -115,7 +115,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
             </div>
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-background border border-primary-gold p-6 shadow-[0_0_30px_rgba(200,155,60,0.2)]"
+              className="absolute -bottom-6 left-2 sm:-left-6 bg-background border border-primary-gold p-4 sm:p-6 shadow-[0_0_30px_rgba(200,155,60,0.2)]"
               animate={{ y: [-4, 4, -4] }}
               transition={{ repeat: Infinity, duration: 4 }}
             >
@@ -180,7 +180,7 @@ export default function About() {
               { title: 'Innovation', desc: 'Pushing boundaries to invent what\'s next, not just what\'s now. We refuse to accept the status quo in technology.' },
               { title: 'Excellence', desc: 'Demanding the absolute highest standard in our engineering, our design, and our communication. Good is the enemy of great.' },
               { title: 'Integrity', desc: 'Unwavering transparency and ethics in our partnerships. We build trust by delivering on our promises, every single time.' },
-              { title: 'Collaboration', desc: 'Fusing brilliant minds across borders. The synergy of Kuwaiti corporate strategy and Indian engineering excellence.' },
+              { title: 'Collaboration', desc: 'Fusing brilliant minds. The synergy of modern strategic consulting and elite software engineering excellence.' },
               { title: 'Agility', desc: 'Adapting to shifting markets with speed, precision, and grace. We architect software that pivots as fast as your business does.' },
               { title: 'Client Success', desc: 'Your victory is our singular, ultimate metric of achievement. We measure our success entirely by the growth of our partners.' },
             ].map((value, idx) => (

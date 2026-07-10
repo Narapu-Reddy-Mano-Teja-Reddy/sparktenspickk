@@ -70,33 +70,11 @@ export default function Contact() {
                 </p>
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
-                  <span>sales@sparktenspick.com</span>
+                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
                 </p>
                 <p className="flex items-start gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
-                  <span>Tech Park, Cyber City, Hyderabad, India</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Kuwait Card */}
-            <div className="bg-card p-6 sm:p-10 border border-border group hover:border-primary-gold transition-colors duration-500 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-primary-gold/5 rounded-bl-full group-hover:scale-150 transition-transform duration-500"></div>
-              <h2 className="text-3xl text-white font-heading uppercase mb-8 flex items-center gap-4 relative z-10">
-                <span className="w-10 h-px bg-primary-gold block"></span> Kuwait Office
-              </h2>
-              <div className="space-y-5 text-white/70 font-body relative z-10">
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Phone</span> 
-                  <span>+965 1234 5678</span>
-                </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Email</span> 
-                  <span>sales@sparktenspick.com</span>
-                </p>
-                <p className="flex items-start gap-4">
-                  <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading mt-1 w-20 flex-shrink-0">Address</span> 
-                  <span>Spark Tower, Al Asimah, Kuwait City</span>
+                  <span>Tech Park, Cyber City, Pullameta, India</span>
                 </p>
               </div>
             </div>

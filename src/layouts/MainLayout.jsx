@@ -120,36 +120,47 @@ export default function MainLayout() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
             <motion.img
               src="/logo.png"
               alt="SPARK TENSPICK Logo"
-              className="h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(200,155,60,0.5)]"
+              className="h-11 sm:h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(200,155,60,0.5)]"
               whileHover={{ scale: 1.05, filter: 'drop-shadow(0 0 20px rgba(200,155,60,0.8))' }}
               transition={{ duration: 0.3 }}
             />
             <div className="flex flex-col leading-none">
-              <span className="font-heading text-white text-xs md:text-sm tracking-[0.3em] uppercase">Spark</span>
-              <span className="font-heading text-primary-gold text-xs md:text-sm tracking-[0.3em] uppercase">Tenspick</span>
+              <span className="font-heading text-white text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase">Spark</span>
+              <span className="font-heading text-primary-gold text-[10px] sm:text-xs md:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase">Tenspick</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`relative text-xs xl:text-sm tracking-widest uppercase transition-colors group ${
-                  location.pathname === link.path ? 'text-primary-gold' : 'text-muted hover:text-primary-gold'
-                }`}
-              >
-                {link.name}
-                <span className={`absolute -bottom-1 left-0 h-px bg-primary-gold transition-all duration-300 ${
-                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isServices = link.name === 'Services';
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={
+                    isServices
+                      ? `relative text-xs xl:text-sm tracking-widest uppercase transition-all duration-300 px-3.5 py-1.5 rounded-full border border-primary-gold/30 bg-primary-gold/5 shadow-[0_0_12px_rgba(200,155,60,0.15)] hover:bg-primary-gold/10 hover:shadow-[0_0_20px_rgba(200,155,60,0.35)] ${
+                          location.pathname === link.path ? 'text-primary-gold border-primary-gold/60' : 'text-primary-gold hover:text-secondary-gold'
+                        }`
+                      : `relative text-xs xl:text-sm tracking-widest uppercase transition-all duration-300 group ${
+                          location.pathname === link.path ? 'text-primary-gold' : 'text-muted hover:text-primary-gold'
+                        }`
+                  }
+                >
+                  {link.name}
+                  {!isServices && (
+                    <span className={`absolute -bottom-1 left-0 h-px bg-primary-gold transition-all duration-300 ${
+                      location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`} />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden lg:block">
@@ -195,23 +206,30 @@ export default function MainLayout() {
               className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
             >
               <div className="flex flex-col px-4 py-6 space-y-4">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.05 }}
-                  >
-                    <Link
-                      to={link.path}
-                      className={`block text-sm tracking-widest uppercase py-1 ${
-                        location.pathname === link.path ? 'text-primary-gold' : 'text-muted hover:text-primary-gold'
-                      } transition-colors`}
+                {navLinks.map((link, i) => {
+                  const isServices = link.name === 'Services';
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: i * 0.05 }}
                     >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        to={link.path}
+                        className={
+                          isServices
+                            ? `block text-sm tracking-widest uppercase py-2 px-3 border-l-2 border-primary-gold bg-primary-gold/5 text-primary-gold transition-colors font-bold shadow-[inset_0_0_8px_rgba(200,155,60,0.1)]`
+                            : `block text-sm tracking-widest uppercase py-1 ${
+                                location.pathname === link.path ? 'text-primary-gold' : 'text-muted hover:text-primary-gold'
+                              } transition-colors`
+                        }
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
                 <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
                   <Link
                     to="/contact"
@@ -255,14 +273,14 @@ export default function MainLayout() {
 
             {/* Brand */}
             <div>
-              <Link to="/" className="mb-6 flex items-center gap-3">
+              <Link to="/" className="mb-6 flex items-center gap-2 sm:gap-3">
                 <img
                   src="/logo.png"
                   alt="SPARK TENSPICK Logo"
-                  className="h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(200,155,60,0.4)]"
+                  className="h-11 sm:h-14 md:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(200,155,60,0.4)]"
                 />
                 {/* Always show brand text inline, single line on mobile */}
-                <span className="font-heading text-white text-sm tracking-[0.25em] uppercase whitespace-nowrap">
+                <span className="font-heading text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] uppercase whitespace-nowrap">
                   Spark <span className="text-primary-gold">Tenspick</span>
                 </span>
               </Link>
@@ -343,15 +361,11 @@ export default function MainLayout() {
               <ul className="space-y-3 text-muted font-body text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-primary-gold text-xs uppercase tracking-widest font-heading mt-0.5 w-8 flex-shrink-0">IN</span>
-                  <span>Hyderabad, India</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary-gold text-xs uppercase tracking-widest font-heading mt-0.5 w-8 flex-shrink-0">KW</span>
-                  <span>Kuwait City, Kuwait</span>
+                  <span>Pullameta, India</span>
                 </li>
                 <li>
-                  <a href="mailto:sales@sparktenspick.com" className="hover:text-primary-gold transition-colors text-xs break-all">
-                    sales@sparktenspick.com
+                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors text-xs break-all">
+                    sparktenspick@gmail.com
                   </a>
                 </li>
               </ul>

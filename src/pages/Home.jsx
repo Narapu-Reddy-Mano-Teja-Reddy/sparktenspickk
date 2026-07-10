@@ -20,7 +20,7 @@ function ServiceCard({ img, title, desc, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group relative overflow-hidden border border-white/8 bg-card hover:border-primary-gold/50 transition-all duration-500"
+      className="group relative overflow-hidden border border-white/8 bg-card hover:border-primary-gold/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(200,155,60,0.12)]"
     >
       <Link to="/services" className="block w-full h-full">
         <div className="aspect-video overflow-hidden relative">
@@ -63,7 +63,7 @@ export default function Home() {
       <SEO 
         title="Home" 
         description="SPARK TENSPICK is a premier global technology firm engineering premium enterprise software, AI-powered automation systems, cloud architecture, and high-end digital experiences." 
-        keywords="Spark Tenspick, Tenspick, Kuwait tech firm, India software company, premium enterprise software, AI integration"
+        keywords="Spark Tenspick, Tenspick, India tech firm, India software company, premium enterprise software, AI integration"
       />
 
       {/* ── Hero Parallax ── */}
@@ -126,7 +126,7 @@ export default function Home() {
                 PIONEERING THE <span className="text-primary-gold block mt-2">FUTURE OF TECH</span>
               </h2>
               <p className="text-muted text-lg font-body leading-relaxed mb-6">
-                SPARK TENSPICK is a premier global technology firm formed through a strategic collaboration between TENSPICK and Spark Groups Kuwait.
+                SPARK TENSPICK is a premier global technology firm.
               </p>
               <p className="text-muted text-lg font-body leading-relaxed mb-10">
                 With a deep focus on luxury digital aesthetics and robust enterprise engineering, we bridge the gap between imagination and execution. Our cross-functional teams specialize in solving complex business challenges with elegant, scalable technology.
@@ -172,7 +172,7 @@ export default function Home() {
               </div>
               {/* Floating Stats Card */}
               <motion.div
-                className="absolute -bottom-6 -left-6 bg-card border border-primary-gold/40 p-6 shadow-[0_0_30px_rgba(200,155,60,0.2)]"
+                className="absolute -bottom-6 left-2 sm:-left-6 bg-card border border-primary-gold/40 p-4 sm:p-6 shadow-[0_0_30px_rgba(200,155,60,0.2)]"
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               >

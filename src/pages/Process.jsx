@@ -48,7 +48,7 @@ export default function Process() {
       <SEO 
         title="Our Process" 
         description="A structured, battle-tested six-phase development methodology (Discover, Design, Develop, Test, Launch, Support) ensuring quality, speed, and transparency." 
-        keywords="software development process, agile design Kuwait, tech strategy, QA testing"
+        keywords="software development process, agile design India, tech strategy, QA testing"
       />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
@@ -65,7 +65,7 @@ export default function Process() {
           </p>
         </motion.div>
 
-        <div className="relative border-l-2 border-primary-gold/20 pl-6 md:pl-10 ml-2 md:ml-8">
+        <div className="relative border-l-2 border-primary-gold/20 pl-8 md:pl-10 ml-4 md:ml-8">
           {processes.map((proc, index) => (
             <motion.div 
               key={proc.step}
@@ -76,7 +76,7 @@ export default function Process() {
               className="mb-20 relative group"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-[34px] md:-left-[46px] top-1 w-5 h-5 rounded-full bg-primary-gold border-4 border-background group-hover:shadow-[0_0_12px_rgba(200,155,60,0.6)] transition-shadow duration-300"></div>
+              <div className="absolute -left-[42px] md:-left-[50px] top-1 w-5 h-5 rounded-full bg-primary-gold border-4 border-background group-hover:shadow-[0_0_12px_rgba(200,155,60,0.6)] transition-shadow duration-300"></div>
               
               {/* Step Number */}
               <div className="flex items-center gap-4 mb-4">

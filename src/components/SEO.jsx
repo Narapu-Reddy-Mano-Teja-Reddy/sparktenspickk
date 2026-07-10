@@ -24,7 +24,7 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
     setMetaTag('description', finalDesc);
     
     const generateDynamicKeywords = () => {
-      const locations = ['india', 'kuwait'];
+      const locations = ['india'];
       const prefixes = [
         'best', 'top', 'affordable', 'professional', 'enterprise', 
         'custom', 'near me', 'for startups', 'for business', 
@@ -49,9 +49,6 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
           `web development ${loc}`,
           `custom software ${loc}`
         ];
-        if (loc === 'kuwait') {
-          core.push(`technology company ${loc}`);
-        }
         generated.push(...core);
 
         // Combinations
@@ -96,9 +93,9 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
     };
 
     const defaultKeywords = [
-      "Spark Tenspick", "Tenspick", "Spark Groups Kuwait", "enterprise software", 
+      "Spark Tenspick", "Tenspick", "enterprise software", 
       "AI automation", "cloud architecture", "UI/UX design", "custom development", 
-      "software development Kuwait", "tech firm Hyderabad"
+      "software development India", "tech firm Pullameta"
     ];
     
     const combinedKeywords = Array.from(new Set([
@@ -158,8 +155,8 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
           "@type": "ContactPoint",
           "telephone": "+91-98765-43210",
           "contactType": "sales",
-          "areaServed": ["IN", "KW"],
-          "availableLanguage": ["en", "ar"]
+          "areaServed": ["IN"],
+          "availableLanguage": ["en"]
         }
       ]
     };
