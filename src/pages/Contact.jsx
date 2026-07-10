@@ -70,7 +70,10 @@ export default function Contact() {
                 </p>
                 <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Email</span> 
-                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
+                  <span className="flex flex-col">
+                    <a href="mailto:info@sparktenspick.com" className="hover:text-primary-gold transition-colors break-all">info@sparktenspick.com</a>
+                    <a href="mailto:contact@sparktenspick.com" className="hover:text-primary-gold transition-colors break-all">contact@sparktenspick.com</a>
+                  </span>
                 </p>
                 <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Address</span> 
@@ -96,7 +99,10 @@ export default function Contact() {
                 </p>
                 <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Email</span> 
-                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors break-all">sparktenspick@gmail.com</a>
+                  <span className="flex flex-col">
+                    <a href="mailto:info@sparktenspick.com" className="hover:text-primary-gold transition-colors break-all">info@sparktenspick.com</a>
+                    <a href="mailto:contact@sparktenspick.com" className="hover:text-primary-gold transition-colors break-all">contact@sparktenspick.com</a>
+                  </span>
                 </p>
                 <p className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
                   <span className="text-primary-gold uppercase tracking-widest text-xs font-bold font-heading sm:mt-1 w-28 sm:w-32 flex-shrink-0">Address</span> 

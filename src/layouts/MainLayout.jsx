@@ -377,9 +377,12 @@ export default function MainLayout() {
                     <a href="tel:+96555139630" className="hover:text-primary-gold transition-colors">+965 55139630</a>
                   </p>
                 </div>
-                <div className="pt-2 border-t border-white/5">
-                  <a href="mailto:sparktenspick@gmail.com" className="hover:text-primary-gold transition-colors text-xs break-all">
-                    sparktenspick@gmail.com
+                <div className="pt-2 border-t border-white/5 flex flex-col gap-1">
+                  <a href="mailto:info@sparktenspick.com" className="hover:text-primary-gold transition-colors text-xs break-all">
+                    info@sparktenspick.com
+                  </a>
+                  <a href="mailto:contact@sparktenspick.com" className="hover:text-primary-gold transition-colors text-xs break-all">
+                    contact@sparktenspick.com
                   </a>
                 </div>
               </div>
