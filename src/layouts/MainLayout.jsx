@@ -273,16 +273,16 @@ export default function MainLayout() {
 
             {/* Brand */}
             <div>
-              <Link to="/" className="mb-6 flex items-center gap-3 sm:gap-4 flex-nowrap">
+              <Link to="/" className="mb-6 flex items-center gap-3 sm:gap-4 flex-nowrap group">
                 <img
                   src="/logo.png"
                   alt="SPARK TENSPICK Logo"
                   className="h-14 sm:h-16 md:h-18 w-auto flex-shrink-0 object-contain drop-shadow-[0_0_10px_rgba(200,155,60,0.4)]"
                 />
-                {/* Always show brand text inline, single line on mobile */}
-                <span className="font-heading text-white text-sm sm:text-base md:text-lg tracking-[0.2em] sm:tracking-[0.25em] uppercase whitespace-nowrap">
-                  Spark <span className="text-primary-gold">Tenspick</span>
-                </span>
+                <div className="flex flex-col leading-none flex-shrink-0">
+                  <span className="font-heading text-white text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase">Spark</span>
+                  <span className="font-heading text-primary-gold text-xs sm:text-sm md:text-base tracking-[0.2em] sm:tracking-[0.25em] uppercase">Tenspick</span>
+                </div>
               </Link>
               <p className="text-muted font-body mb-6 text-sm leading-relaxed">
                 Empowering global businesses with world-class technology, enterprise software, AI, and digital innovation.
