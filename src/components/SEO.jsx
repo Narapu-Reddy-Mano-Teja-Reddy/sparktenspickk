@@ -107,19 +107,30 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
     
     setMetaTag('robots', 'index, follow');
 
+    // Google Site Verification env variable support
+    const gscVerification = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION;
+    if (gscVerification) {
+      setMetaTag('google-site-verification', gscVerification);
+    }
+
+    // Consolidated canonical URL pointing to production domain
+    const productionOrigin = 'https://sparktenspick.com';
+    const currentPath = window.location.pathname;
+    const resolvedCanonical = canonicalUrl || `${productionOrigin}${currentPath}`;
+
     // Open Graph / Facebook Tags
     setMetaTag('og:title', finalTitle, true);
     setMetaTag('og:description', finalDesc, true);
     setMetaTag('og:type', ogType, true);
-    setMetaTag('og:image', `${window.location.origin}/logo.png`, true);
-    setMetaTag('og:url', canonicalUrl || window.location.href, true);
+    setMetaTag('og:image', `${productionOrigin}/logo.png`, true);
+    setMetaTag('og:url', resolvedCanonical, true);
     setMetaTag('og:site_name', 'Spark Tenspick');
 
     // Twitter Tags
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', finalTitle);
     setMetaTag('twitter:description', finalDesc);
-    setMetaTag('twitter:image', `${window.location.origin}/logo.png`);
+    setMetaTag('twitter:image', `${productionOrigin}/logo.png`);
 
     // Canonical link
     let link = document.querySelector('link[rel="canonical"]');
@@ -128,7 +139,7 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
       link.setAttribute('rel', 'canonical');
       document.head.appendChild(link);
     }
-    link.setAttribute('href', canonicalUrl || window.location.href);
+    link.setAttribute('href', resolvedCanonical);
 
     // JSON-LD Structured Data Schema Markup
     let schemaScript = document.getElementById('json-ld-schema');
@@ -139,12 +150,16 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
       document.head.appendChild(schemaScript);
     }
 
+    const schemas = [];
+
+    // 1. Organization Schema
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://sparktenspick.com/#organization",
       "name": "Spark Tenspick",
       "url": "https://sparktenspick.com",
-      "logo": `${window.location.origin}/logo.png`,
+      "logo": "https://sparktenspick.com/logo.png",
       "keywords": combinedKeywords,
       "sameAs": [
         "https://www.linkedin.com/company/sparktenspick",
@@ -167,8 +182,106 @@ export default function SEO({ title, description, keywords, ogType = 'website', 
         }
       ]
     };
+    schemas.push(organizationSchema);
 
-    schemaScript.textContent = JSON.stringify(organizationSchema);
+    // 2. WebSite Schema
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://sparktenspick.com/#website",
+      "name": "Spark Tenspick",
+      "url": "https://sparktenspick.com",
+      "publisher": {
+        "@id": "https://sparktenspick.com/#organization"
+      }
+    };
+    schemas.push(websiteSchema);
+
+    // 3. SiteNavigationElement Schema
+    const navigationSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": "https://sparktenspick.com/#navigation",
+      "name": "Navigation Menu",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Home",
+          "url": "https://sparktenspick.com/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "About",
+          "url": "https://sparktenspick.com/about"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Services",
+          "url": "https://sparktenspick.com/services"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Solutions",
+          "url": "https://sparktenspick.com/solutions"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Industries",
+          "url": "https://sparktenspick.com/industries"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Process",
+          "url": "https://sparktenspick.com/process"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 7,
+          "name": "Contact",
+          "url": "https://sparktenspick.com/contact"
+        }
+      ]
+    };
+    schemas.push(navigationSchema);
+
+    // 4. BreadcrumbList Schema (on sub-pages only)
+    if (currentPath && currentPath !== '/') {
+      const pathSegments = currentPath.split('/').filter(Boolean);
+      const breadcrumbs = [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sparktenspick.com/"
+        }
+      ];
+
+      pathSegments.forEach((segment, idx) => {
+        const name = segment.charAt(0).toUpperCase() + segment.slice(1);
+        const url = `https://sparktenspick.com/${pathSegments.slice(0, idx + 1).join('/')}`;
+        breadcrumbs.push({
+          "@type": "ListItem",
+          "position": idx + 2,
+          "name": name,
+          "item": url
+        });
+      });
+
+      const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs
+      };
+      schemas.push(breadcrumbSchema);
+    }
+
+    schemaScript.textContent = JSON.stringify(schemas);
   }, [title, description, keywords, ogType, canonicalUrl]);
 
   return null;
